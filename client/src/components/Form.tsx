@@ -5,10 +5,6 @@ import Prediction from './Prediction';
 import PredictionError from './PredictionError';
 
 const Form: React.FC = () => {
-    const [firstName, setFirstName] = useState<string>('');
-    const [lastName, setLastName] = useState<string>('');
-    const [email, setEmail] = useState<string>('');
-
     const [longitude, setLongitude] = useState<number>(-118.36);
     const [latitude, setLatitude] = useState<number>(34.16);
     const [housingMedianAge, setHousingMedianAge] = useState<number>(32.0);

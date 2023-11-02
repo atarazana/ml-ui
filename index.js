@@ -5,7 +5,7 @@ const path = require('path');
 
 const { v4: uuidv4 } = require('uuid');
 
-const url = 'http://127.0.0.1:5000'; // Replace with your API URL
+const url = process.env.BACKEND_URL || 'http://127.0.0.1:5000'; // Replace with your API URL
 
 // Middleware to parse JSON data
 app.use(express.json());
@@ -19,9 +19,6 @@ let messages = [];
 // POST /predict
 app.post('/api/predict', async (req, res) => {
   console.log(`req=${JSON.stringify(req.body)}`)
-
-  // Generate a random UUID
-  let uuid = uuidv4();
 
   const message = req.body;
   messages.push(message);

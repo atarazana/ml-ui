@@ -4,6 +4,8 @@
   "description": "UI for ML example",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npm install --prefix client",
+    "build": "npm run build --prefix client",
     "test": "test",
     "start": "node index.js",
     "dev": "./node_modules/nodemon/bin/nodemon.js index.js"
