@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const url = process.env.BACKEND_URL || 'http://127.0.0.1:5000'; // Replace with your API URL
+const url = process.env.BACKEND_URL || 'http://127.0.0.1:8080'; // Replace with your API URL
 
 // Middleware to parse JSON data
 app.use(express.json());
